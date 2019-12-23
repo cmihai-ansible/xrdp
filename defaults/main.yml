@@ -1,0 +1,9 @@
+---
+# defaults file for xrdp
+
+xrdp_remove_packages: true
+xrdp_enable_service: true
+xrdp_copy_templates: true
+xrdp_firewall_configure: true
+xrdp_firewall_rules:
+  - service:

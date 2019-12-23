@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  author: Mihai Criveti
+  description: Xrdp
+  company: Mihai Criveti
+  license: MIT
+
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Fedora
+      versions:
+        - 31
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - rhel
+    - centos
+    - fedora
+
+# dependencies: []

@@ -1,0 +1,27 @@
+---
+# Install xrdp packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ xrdp_packages_remove }}"
+    state: absent
+  become: true
+  when: xrdp_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ xrdp_packages_repos }}"
+    state: present
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ xrdp_packages_prereq }}"
+    state: present
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ xrdp_packages_install }}"
+    state: present
+  become: true
