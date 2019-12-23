@@ -3,6 +3,8 @@ Role Name
 
 xrdp
 
+[![Build Status](https://travis-ci.org/cmihai-ansible/xrdp.svg?branch=master)](https://travis-ci.org/cmihai-ansible/xrdp)
+
 Requirements
 ------------
 
