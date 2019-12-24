@@ -23,7 +23,8 @@
     state: "{{ item.state | default('enabled') }}"
     service: "{{ item.service if item.service is defined else omit }}"
     immediate: true
-    port: "{{ item.port if item.port is defined else omit }}"
+    port: "({{ item.port }}/{{ item.protocol | default('tcp') | lower) }}
+      if item.port is defined else omit"
   loop: "{{ xrdp_firewall_rules }}"
   notify: reload firewalld
   become: true
