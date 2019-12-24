@@ -6,4 +6,4 @@ xrdp_enable_service: true
 xrdp_copy_templates: true
 xrdp_firewall_configure: true
 xrdp_firewall_rules:
-  - service:
+  - port: 3389/tcp
