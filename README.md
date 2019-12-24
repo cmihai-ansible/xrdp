@@ -23,11 +23,10 @@ Role Variables
 --------------
 
 ```
-xrdp_remove_packages: true
 xrdp_enable_service: true
 xrdp_firewall_configure: true
 xrdp_firewall_rules:
-  - service:
+  - port: 3389
 ```
 
 Dependencies
