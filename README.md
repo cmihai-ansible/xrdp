@@ -13,6 +13,13 @@ Requirements
 Role Variables
 --------------
 
+```
+xrdp_remove_packages: true
+xrdp_enable_service: true
+xrdp_firewall_configure: true
+xrdp_firewall_rules:
+  - service:
+```
 
 Dependencies
 ------------
@@ -22,20 +29,25 @@ Dependencies
 Example Playbook
 ----------------
 
-    - hosts: servers
-      roles:
-         - role: xrdp
+```yaml
+---
+- name: Install xrdp on localhost
+  hosts:
+    - localhost
+  connection: local
 
-    - name: set tuned state
+  tasks:
+    - name: xrdp is configured
       import_role:
-        name: xrdp
+        name: crivetimihai.xrdp
       vars:
         xrdp_remove_packages: true
         xrdp_enable_service: true
         xrdp_firewall_configure: true
         xrdp_firewall_rules:
-          - service: service_name
+          - port: 3389
       tags: xrdp
+```
 
 License
 -------
