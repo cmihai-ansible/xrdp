@@ -5,6 +5,15 @@ xrdp
 
 [![Build Status](https://travis-ci.org/cmihai-ansible/xrdp.svg?branch=master)](https://travis-ci.org/cmihai-ansible/xrdp)
 
+Ansible Galaxy:
+---------------
+
+[https://galaxy.ansible.com/crivetimihai/xrdp](https://galaxy.ansible.com/crivetimihai/xrdp)
+
+```bash
+ansible-galaxy install crivetimihai.xrdp
+```
+
 Requirements
 ------------
 

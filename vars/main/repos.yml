@@ -1,0 +1,13 @@
+---
+# Repo RPM packages
+_xrdp_packages_repos:
+  all: []
+  CentOS_7:
+    - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  RedHat_7:
+    - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  CentOS_8:
+    - https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+  RedHat_8:
+    - https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+  Fedora31: []

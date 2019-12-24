@@ -1,0 +1,19 @@
+---
+# Remove packages: uninstall if found
+_xrdp_packages_install:
+  all: []
+  CentOS_7:
+    - xrdp
+    - tigervnc-server
+  RedHat_7:
+    - xrdp
+    - tigervnc-server
+  CentOS_8:
+    - xrdp
+    - tigervnc-server
+  RedHat_8:
+    - xrdp
+    - tigervnc-server
+  Fedora_31:
+    - xrdp
+    - tigervnc-server

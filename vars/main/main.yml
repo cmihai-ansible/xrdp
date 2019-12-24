@@ -1,0 +1,18 @@
+---
+# vars file for packages
+
+# Detected OS
+my_os: "{{ ansible_distribution }}_{{ ansible_distribution_major_version }}"
+
+# Services Enable
+xrdp_services_enable: "{{ _xrdp_services_enable['all']
+  | union ( _xrdp_services_enable[my_os]
+  | default([]) ) }}"
+
+# Packages lists
+xrdp_packages_repos: "{{ _xrdp_packages_repos['all']
+  | union ( _xrdp_packages_repos[my_os]
+  | default([]) ) }}"
+xrdp_packages_install: "{{ _xrdp_packages_install['all']
+  | union ( _xrdp_packages_install[my_os]
+  | default([]) ) }}"
