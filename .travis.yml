@@ -4,7 +4,7 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: {{ cookiecutter.role_name }}
+    - ROLE_NAME: xrdp
   matrix:
     - CONTAINER_DISTRO=centos CONTAINER_VERSION=7
     - CONTAINER_DISTRO=centos CONTAINER_VERSION=8
