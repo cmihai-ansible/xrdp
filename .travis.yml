@@ -4,13 +4,28 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: xrdp
+    - ROLE_NAME: apache
   matrix:
-    - CONTAINER_DISTRO=centos CONTAINER_VERSION=7
-    - CONTAINER_DISTRO=centos CONTAINER_VERSION=8
-    - CONTAINER_DISTRO=fedora CONTAINER_VERSION=31
-    - CONTAINER_REGISTRY=registry.access.redhat.com/ubi7 CONTAINER_DISTRO=ubi CONTAINER_VERSION=latest
-    - CONTAINER_REGISTRY=registry.access.redhat.com/ubi8 CONTAINER_DISTRO=ubi CONTAINER_VERSION=latest
+    - >
+      CONTAINER_DISTRO=centos
+      CONTAINER_VERSION=7
+      CONTAINER_COMMAND="/usr/sbin/init"
+    - >
+      CONTAINER_DISTRO=centos
+      CONTAINER_VERSION=8
+      CONTAINER_COMMAND="/usr/sbin/init"
+    - >
+      CONTAINER_DISTRO=fedora
+      CONTAINER_VERSION=31
+      CONTAINER_COMMAND="/usr/sbin/init"
+    - >
+      CONTAINER_DISTRO=debian
+      CONTAINER_VERSION=10
+      CONTAINER_COMMAND="/sbin/init"
+    - >
+      CONTAINER_DISTRO=ubuntu
+      CONTAINER_VERSION=18.04
+      CONTAINER_COMMAND="/sbin/init"
 
 install:
   # Install test dependencies.

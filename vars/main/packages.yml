@@ -17,3 +17,9 @@ _xrdp_packages_install:
   Fedora_31:
     - xrdp
     - tigervnc-server
+  Debian_10:
+    - xrdp
+    - tigervnc-server
+  Ubuntu_18:
+    - xrdp
+    - tigervnc-server

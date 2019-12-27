@@ -1,7 +1,7 @@
 ---
 # Configure xrdp
 
-- name: enable service {{ item }}, and start if not started
+- name: service is enabled and started
   service:
     name: "{{ item }}"
     enabled: true

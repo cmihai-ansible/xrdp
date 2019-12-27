@@ -12,3 +12,7 @@ _xrdp_services_enable:
     - xrdp
   Fedora_31:
     - xrdp
+  Debian_10:
+    - xrdp
+  Ubuntu_18:
+    - xrdp

@@ -11,3 +11,5 @@ _xrdp_packages_repos:
   RedHat_8:
     - https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
   Fedora31: []
+  Debian_10: []
+  Ubuntu_18: []
