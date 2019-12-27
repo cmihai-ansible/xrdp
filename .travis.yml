@@ -4,11 +4,13 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: xrdp
+    - ROLE_NAME: {{ cookiecutter.role_name }}
   matrix:
     - CONTAINER_DISTRO=centos CONTAINER_VERSION=7
     - CONTAINER_DISTRO=centos CONTAINER_VERSION=8
     - CONTAINER_DISTRO=fedora CONTAINER_VERSION=31
+    - CONTAINER_REGISTRY=registry.access.redhat.com/ubi7 CONTAINER_DISTRO=ubi CONTAINER_VERSION=latest
+    - CONTAINER_REGISTRY=registry.access.redhat.com/ubi8 CONTAINER_DISTRO=ubi CONTAINER_VERSION=latest
 
 install:
   # Install test dependencies.

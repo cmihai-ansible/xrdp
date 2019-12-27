@@ -13,6 +13,8 @@ lint:
 platforms:
   - name: "xrdp-${CONTAINER_DISTRO:-centos}_${CONTAINER_VERSION:-7}"
     image: "${CONTAINER_DISTRO:-centos}:${CONTAINER_VERSION:-7}"
+    registry:
+      url: "${CONTAINER_REGISTRY:-docker.io}"
     dockerfile: ../resources/Dockerfile.j2
     privileged: true
     pre_build_image: false
