@@ -19,7 +19,7 @@ _xrdp_packages_install:
     - tigervnc-server
   Debian_10:
     - xrdp
-    - tigervnc-server
+    - tigervnc-standalone-server
   Ubuntu_18:
     - xrdp
-    - tigervnc-server
+    - tigervnc-standalone-server
